@@ -1,11 +1,15 @@
 "use client";
 
+import { useState } from "react";
 import styles from "./About.module.scss";
 import { motion } from "framer-motion";
 
-export default function About({ x, y, setIsHovered, size }) {
+export default function About({ x, y }) {
+  const [isHovered, setIsHovered] = useState(false);
+  const size = isHovered ? 200 : 40;
+
   return (
-    <main className={styles.main}>
+    <section className={styles.main}>
       <motion.div
         className={styles.mask}
         animate={{
@@ -32,6 +36,6 @@ export default function About({ x, y, setIsHovered, size }) {
           I&apos;m an experienced Frontend developer
         </p>
       </div>
-    </main>
+    </section>
   );
 }

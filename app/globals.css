@@ -5,6 +5,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --x: 0;
+  --y: 0;
+  --scroll: 0;
+}
+
+@font-face {
+  font-family: "Avant Garde Book BT";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./assets/fonts/AVGARDD_2.woff") format("woff");
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,9 +25,11 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  background-color: #0f0f0f;
+  font-family: "Avant Garde Book BT";
+  overflow-x: hidden;
+  margin-bottom: 100vh;
 }
 
 @layer utilities {

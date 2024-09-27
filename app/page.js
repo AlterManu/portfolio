@@ -4,15 +4,13 @@ import About from "@/components/About/About";
 import { useEffect, useState } from "react";
 import useMousePosition from "./utils/hooks/useMousePosition";
 import Lenis from "@studio-freight/lenis";
+import Hero from "./components/Hero/Hero";
 
 export default function Home() {
   // * Hooks
   useMousePosition();
-
   const [yPosition, setYPosition] = useState(0);
   const [xPosition, setXPosition] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
-  const size = isHovered ? 200 : 40;
 
   // * Methods
   const updatePosition = () => {
@@ -54,13 +52,9 @@ export default function Home() {
   }, []);
 
   return (
-    <>
-      <About
-        x={xPosition}
-        y={yPosition}
-        setIsHovered={setIsHovered}
-        size={size}
-      />
-    </>
+    <main>
+      <Hero />
+      <About x={xPosition} y={yPosition} />
+    </main>
   );
 }
