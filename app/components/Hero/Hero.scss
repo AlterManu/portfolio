@@ -45,18 +45,17 @@
 
 .hero-title {
   color: white;
-  font-size: 20rem;
+  font-size: 16rem;
   margin: 0;
 }
 
-.hero-title-container-2 {
+.hero-name-container {
   display: flex;
   gap: 2rem;
 }
 
 .hero-title-name {
   @extend .hero-title;
-  -webkit-text-stroke: 5px #fff;
   -webkit-text-stroke: 5px #00e1ff;
   color: transparent;
 }

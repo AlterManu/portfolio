@@ -6,6 +6,7 @@ import useMousePosition from "./utils/hooks/useMousePosition";
 import Lenis from "@studio-freight/lenis";
 import Hero from "./components/Hero/Hero";
 import { Horizontal } from "./components/Horizontal/Horizontal";
+import Experiences from "./components/Experiences/Experiences";
 
 export default function Home() {
   // * Hooks
@@ -57,6 +58,7 @@ export default function Home() {
       <Hero />
       <About x={xPosition} y={yPosition} />
       <Horizontal />
+      <Experiences />
     </main>
   );
 }

@@ -30,7 +30,7 @@ export default function Hero() {
             HI THERE
           </motion.h1>
           <motion.div
-            className="hero-title-container-2"
+            className="hero-name-container"
             style={{ translateY: translateBottom }}
           >
             <h1 className="hero-title">I&apos;M</h1>
