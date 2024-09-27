@@ -3,8 +3,6 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
   --x: 0;
   --y: 0;
   --scroll: 0;
@@ -15,13 +13,6 @@
   font-style: normal;
   font-weight: normal;
   src: url("./assets/fonts/AVGARDD_2.woff") format("woff");
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {

@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import useMousePosition from "./utils/hooks/useMousePosition";
 import Lenis from "@studio-freight/lenis";
 import Hero from "./components/Hero/Hero";
+import { Horizontal } from "./components/Horizontal/Horizontal";
 
 export default function Home() {
   // * Hooks
@@ -55,6 +56,7 @@ export default function Home() {
     <main>
       <Hero />
       <About x={xPosition} y={yPosition} />
+      <Horizontal />
     </main>
   );
 }
