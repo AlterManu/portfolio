@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import styles from "./About.module.scss";
+import styles from "./About.scss";
 import { motion } from "framer-motion";
 
 export default function About({ x, y }) {
@@ -9,9 +9,9 @@ export default function About({ x, y }) {
   const size = isHovered ? 200 : 40;
 
   return (
-    <section className={styles.main}>
+    <section className="about">
       <motion.div
-        className={styles.mask}
+        className="about-mask"
         animate={{
           WebkitMaskPosition: `${x - size / 2}px ${y - size / 2}px`,
           WebkitMaskSize: `${size}px`,
@@ -30,7 +30,7 @@ export default function About({ x, y }) {
         </p>
       </motion.div>
 
-      <div className={styles.body}>
+      <div className="about-body">
         <p className={styles.mainParagraph}>
           Hi, I&apos;m Manu Maldonado <br />
           I&apos;m an experienced Frontend developer

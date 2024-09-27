@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef } from "react";
-import styles from "./Hero.module.scss";
+import styles from "./Hero.scss";
 import profile from "../../assets/images/profile.png";
 import asterisk from "../../assets/images/asterisk.png";
 import { useScroll, useTransform, motion } from "framer-motion";
@@ -17,24 +17,24 @@ export default function Hero() {
 
   return (
     <>
-      <section className={styles.hero}>
-        <div className={styles.imageContainer}>
+      <section className="hero">
+        <div className="hero-image-container">
           {/* eslint-disable-next-line */}
-          <img src={profile.src} alt="hero" className={styles.image} />
+          <img src={profile.src} className="hero-image" alt="hero" />
         </div>
-        <div className={styles.titleContainer} ref={container}>
+        <div ref={container} className="hero-title-container">
           <motion.h1
-            className={styles.title}
+            className="hero-title"
             style={{ translateY: translateTop }}
           >
             HI THERE
           </motion.h1>
           <motion.div
-            className={styles.titleContainer2}
+            className="hero-title-container-2"
             style={{ translateY: translateBottom }}
           >
-            <h1 className={styles.title}>I&apos;M</h1>
-            <h1 className={styles.titleName}>MANU</h1>
+            <h1 className="hero-title">I&apos;M</h1>
+            <h1 className="hero-title-name">MANU</h1>
             <div
               style={{
                 width: 50,
@@ -43,9 +43,9 @@ export default function Hero() {
             >
               {/* eslint-disable-next-line */}
               <img
-                className={styles.asterisk}
+                className="hero-asterisk"
                 src={asterisk.src}
-                alt="asterisk"
+                alt="hero-asterisk"
               />
             </div>
           </motion.div>
