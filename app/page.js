@@ -56,8 +56,8 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <About x={xPosition} y={yPosition} />
       <Horizontal />
+      <About x={xPosition} y={yPosition} />
       <Experiences />
     </main>
   );

@@ -5,7 +5,10 @@ const useMousePosition = () => {
     document.body.style.setProperty("--x", e.clientX);
     document.body.style.setProperty(
       "--y",
-      e.clientY + window.scrollY - window.innerHeight - window.innerHeight * 0.1
+      e.clientY +
+        window.scrollY -
+        window.innerHeight * 5 -
+        window.innerHeight * 0.2
     );
   };
 

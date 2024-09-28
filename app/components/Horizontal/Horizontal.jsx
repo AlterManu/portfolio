@@ -27,7 +27,7 @@ export function Horizontal() {
           style={{ x: xBlackDiv }}
           className="w-screen h-screen flex justify-center items-center"
         >
-          <h1 className="text-[10rem] w-3/4 text-white">Frontend developer</h1>
+          <h1 className="text-[10rem] w-3/4 text-white">Software engineer</h1>
         </motion.div>
 
         {/* White section */}
