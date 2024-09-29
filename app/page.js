@@ -7,6 +7,7 @@ import Lenis from "@studio-freight/lenis";
 import Hero from "./components/Hero/Hero";
 import { Horizontal } from "./components/Horizontal/Horizontal";
 import Experiences from "./components/Experiences/Experiences";
+import Stack from "./components/Stack/Stack";
 
 export default function Home() {
   // * Hooks
@@ -59,6 +60,7 @@ export default function Home() {
       <Horizontal />
       <About x={xPosition} y={yPosition} />
       <Experiences />
+      <Stack />
     </main>
   );
 }

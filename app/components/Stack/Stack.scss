@@ -1,0 +1,41 @@
+.stack-aurora {
+  filter: blur(50px);
+  -webkit-filter: blur(50px);
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.aurora-js {
+  @extend .stack-aurora;
+  background-color: #f4e11e;
+}
+
+.aurora-ts {
+  @extend .stack-aurora;
+  background-color: #3178c6;
+}
+
+.aurora-html {
+  @extend .stack-aurora;
+  background-color: #e44d26;
+}
+
+.aurora-mongo {
+  @extend .stack-aurora;
+  background-color: #001e2b;
+}
+
+.aurora-css {
+  @extend .stack-aurora;
+  background-color: #2162af;
+}
+
+.aurora-node {
+  @extend .stack-aurora;
+  background-color: #77af65;
+}

@@ -3,10 +3,10 @@
 import React from "react";
 import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
-import cap from "../../assets/images/logo-capgemini.png";
-import utn from "../../assets/images/logo-utn.png";
-import attlos from "../../assets/images/logo-attlos.png";
-import worksut from "../../assets/images/logo-worksut.png";
+import cap from "@/assets/images/logos/logo-capgemini.png";
+import utn from "@/assets/images/logos/logo-utn.png";
+import attlos from "@/assets/images/logos/logo-attlos.png";
+import worksut from "@/assets/images/logos/logo-worksut.png";
 import "./Experiences.scss";
 
 export default function Experiences() {
@@ -23,7 +23,7 @@ export default function Experiences() {
       logo: cap,
       title: "FRONTEND DEVELOPER",
       dateFrom: "12/2024",
-      dateTo: "now",
+      dateTo: "-",
       aurora: "cap-aurora",
       delay: 0,
     },
@@ -82,11 +82,19 @@ export default function Experiences() {
         },
       }}
     >
+      <div className="w-full flex justify-center items-center">
+        <div className="w-4/5">
+          <h3 className="p-10 text-2xl w-fit text-white">EXPERIENCE</h3>
+        </div>
+      </div>
+
+      {/* COLS CONTAINER */}
       <div className="flex justify-center flex-wrap gap-40">
+        {/* LEFT COL */}
         <div className="flex flex-col">
-          {jobsLeft.map((job) => (
+          {jobsLeft.map((job, i) => (
             <motion.div
-              className="experience-card"
+              className={`experience-card ${i === 0 ? "mt-20" : "mt-[12rem]"}`}
               key={job.company}
               variants={variant}
               initial="hidden"
@@ -94,9 +102,7 @@ export default function Experiences() {
               custom={job.delay}
             >
               {/* logo */}
-              <div
-                className={`${job.style} h-40 rounded-[40px] flex justify-center items-center`}
-              >
+              <div className="h-40 rounded-[40px] flex justify-center items-center">
                 <div className={job.aurora} />
                 {/* eslint-disable-next-line */}
                 <img
@@ -133,10 +139,11 @@ export default function Experiences() {
           ))}
         </div>
 
-        <div className="flex flex-col mt-[10rem]">
+        {/* RIGHT COL */}
+        <div className="flex flex-col mt-[12rem]">
           {jobsRight.map((job) => (
             <motion.div
-              className="experience-card"
+              className="experience-card mt-[12rem]"
               key={job.company}
               variants={variant}
               initial="hidden"
@@ -144,9 +151,7 @@ export default function Experiences() {
               custom={job.delay}
             >
               {/* logo */}
-              <div
-                className={`${job.style} h-40 rounded-[40px] flex justify-center items-center`}
-              >
+              <div className="h-40 rounded-[40px] flex justify-center items-center">
                 <div className={job.aurora} />
                 {/* eslint-disable-next-line */}
                 <img

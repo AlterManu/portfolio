@@ -30,7 +30,7 @@ const useMousePosition = () => {
       // Sumar la diferencia del scroll a la posición del cursor
       const updatedY = y + diffScroll;
 
-      console.log("updatedY -----> ", updatedY);
+      // console.log("updatedY -----> ", updatedY);
       // Actualizar el valor de --y y --scroll
       document.body.style.setProperty("--y", updatedY);
       document.body.style.setProperty("--scroll", currentScroll);
