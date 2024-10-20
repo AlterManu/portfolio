@@ -32,17 +32,17 @@ export default function Stack() {
       <AnimatePresence>
         {techName && (
           <motion.div
-            className="fixed bottom-0 left-6"
+            className="fixed bottom-4 left-6"
             animate={{ y: "0%" }}
-            initial={{ y: "100%" }}
-            exit={{ y: "100%" }}
+            initial={{ y: "150%" }}
+            exit={{ y: "150%" }}
             transition={{
               ease: "backOut",
-              duration: 0.6,
+              duration: 0.8,
               type: "spring",
             }}
           >
-            <div className=" bg-white px-4 py-2 rounded-t-xl">
+            <div className=" bg-white px-4 py-2 rounded-xl">
               <h1 className=" text-black text-2xl">{techName}</h1>
             </div>
           </motion.div>
