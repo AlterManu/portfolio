@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import styles from "./About.scss";
+import "./About.scss";
 import { motion } from "framer-motion";
 
 export default function About({ x, y }) {

@@ -25,17 +25,27 @@
   background-color: #e44d26;
 }
 
-.aurora-mongo {
-  @extend .stack-aurora;
-  background-color: #001e2b;
-}
-
 .aurora-css {
   @extend .stack-aurora;
   background-color: #2162af;
 }
 
+.aurora-react {
+  @extend .stack-aurora;
+  background-color: #61dafb;
+}
+
+.aurora-next {
+  @extend .stack-aurora;
+  background-color: #080808;
+}
+
 .aurora-node {
   @extend .stack-aurora;
   background-color: #77af65;
+}
+
+.aurora-mongo {
+  @extend .stack-aurora;
+  background-color: #001e2b;
 }

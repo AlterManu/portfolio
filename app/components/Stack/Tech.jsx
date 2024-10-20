@@ -2,10 +2,16 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-export default function Tech({ item }) {
+export default function Tech({ item, showSign }) {
   const [isHovered, setIsHovered] = useState(false);
-  const show = () => setIsHovered(true);
-  const hide = () => setIsHovered(false);
+  const show = () => {
+    setIsHovered(true);
+    showSign(item.name);
+  };
+  const hide = () => {
+    setIsHovered(false);
+    showSign(null);
+  };
 
   return (
     <div className="w-[200px] h-[200px] relative">
@@ -35,16 +41,6 @@ export default function Tech({ item }) {
           onMouseLeave={hide}
         />
       </div>
-      {/* <div className="absolute bottom-4 w-full text-center">
-          <motion.h1
-            className="text-white text-sm"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: isHovered ? 1 : 0 }}
-            transition={{ ease: "backOut", duration: 0.5 }}
-          >
-            MongoDB
-          </motion.h1>
-        </div> */}
     </div>
   );
 }
