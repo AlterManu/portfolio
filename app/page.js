@@ -55,7 +55,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main>
+    <main className="palindrome">
       <Hero />
       <Horizontal />
       <About x={xPosition} y={yPosition} />
