@@ -37,8 +37,8 @@ export default function Hero() {
             <h1 className="hero-title-name">MANU</h1>
             <div
               style={{
-                width: 50,
-                height: 50,
+                width: 40,
+                height: 40,
               }}
             >
               {/* eslint-disable-next-line */}
