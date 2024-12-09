@@ -42,7 +42,7 @@ export default function ExperienceCard({ job, className }) {
             {job.title}
           </h3>
         </div>
-        <div>
+        <div className="text-right">
           <h3 className="text-[rgba(255,255,255,0.5)] font-semibold text-xl">
             {job.dateFrom}
           </h3>

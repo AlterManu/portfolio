@@ -8,7 +8,8 @@ import Hero from "./components/Hero/Hero";
 import { Horizontal } from "./components/Horizontal/Horizontal";
 import Experiences from "./components/Experiences/Experiences";
 import Stack from "./components/Stack/Stack";
-import Invitation from "./components/Collaborate/Collaborate";
+import Collaborate from "./components/Collaborate/Collaborate";
+import Contact from "./components/Contact/Contact";
 
 export default function Home() {
   // * Hooks
@@ -62,7 +63,8 @@ export default function Home() {
       <About x={xPosition} y={yPosition} />
       <Experiences />
       <Stack />
-      <Invitation />
+      <Collaborate />
+      <Contact />
     </main>
   );
 }

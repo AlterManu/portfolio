@@ -1,15 +1,15 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
 import cap from "@/assets/images/logos/logo-capgemini.png";
 import utn from "@/assets/images/logos/logo-utn.png";
 import attlos from "@/assets/images/logos/logo-attlos.png";
 import worksut from "@/assets/images/logos/logo-worksut.png";
-import "./Experiences.scss";
 import ExperienceCard from "./ExperienceCard";
 import ExperienceYear from "./ExperienceYear";
+import "./Experiences.scss";
 
 const jobsLeft = [
   {

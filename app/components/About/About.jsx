@@ -9,9 +9,9 @@ export default function About({ x, y }) {
   const size = isHovered ? 300 : 40;
 
   return (
-    <section className="h-screen relative flex justify-center items-center">
+    <section className="about-bg">
       <motion.div
-        className="about-mask w-full h-full flex flex-col justify-center items-center text-white cursor-default"
+        className="about-mask"
         animate={{ WebkitMaskPosition: `${x - size / 2}px ${y - size / 2}px`, WebkitMaskSize: `${size}px` }} //prettier-ignore
         transition={{ ease: "backOut", duration: 0.3 }}
       >
@@ -53,7 +53,7 @@ export default function About({ x, y }) {
           <div className="w-4/5">
             <p className="p-10 text-6xl w-fit">
               Passionate about <br />
-              creating web applications <br />
+              developing web applications <br />
               based on clean and scalable code <br />
               focusing on creating <br />
               amazing user experiences. <br />
@@ -61,6 +61,9 @@ export default function About({ x, y }) {
           </div>
         </div>
       </div>
+
+      <div className="about-bg2" />
+      <div className="about-bg3" />
     </section>
   );
 }

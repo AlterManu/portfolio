@@ -16,41 +16,36 @@ export default function Hero() {
   const translateBottom = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <>
-      <section className="hero">
-        <div className="hero-image-container">
-          {/* eslint-disable-next-line */}
-          <img src={profile.src} className="hero-image" alt="hero" />
-        </div>
-        <div ref={container} className="hero-title-container">
-          <motion.h1
-            className="hero-title"
-            style={{ translateY: translateTop }}
+    <section className="hero">
+      <div className="hero-image-container">
+        {/* eslint-disable-next-line */}
+        <img src={profile.src} className="hero-image" alt="hero" />
+      </div>
+      <div ref={container} className="hero-title-container">
+        <motion.h1 className="hero-title" style={{ translateY: translateTop }}>
+          HI THERE
+        </motion.h1>
+        <motion.div
+          className="hero-name-container"
+          style={{ translateY: translateBottom }}
+        >
+          <h1 className="hero-title">I&apos;M</h1>
+          <h1 className="hero-title-name">MANU</h1>
+          <div
+            style={{
+              width: 40,
+              height: 40,
+            }}
           >
-            HI THERE
-          </motion.h1>
-          <motion.div
-            className="hero-name-container"
-            style={{ translateY: translateBottom }}
-          >
-            <h1 className="hero-title">I&apos;M</h1>
-            <h1 className="hero-title-name">MANU</h1>
-            <div
-              style={{
-                width: 40,
-                height: 40,
-              }}
-            >
-              {/* eslint-disable-next-line */}
-              <img
-                className="hero-asterisk"
-                src={asterisk.src}
-                alt="hero-asterisk"
-              />
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </>
+            {/* eslint-disable-next-line */}
+            <img
+              className="hero-asterisk"
+              src={asterisk.src}
+              alt="hero-asterisk"
+            />
+          </div>
+        </motion.div>
+      </div>
+    </section>
   );
 }
