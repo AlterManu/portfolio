@@ -31,7 +31,7 @@ export default function About({ x, y }) {
             <p
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
-              className="p-10 text-6xl w-fit"
+              className="p-10 text-5xl w-fit"
             >
               Apasionado por <br />
               desarrollar aplicaciones web <br />
@@ -51,7 +51,7 @@ export default function About({ x, y }) {
         </div>
         <div className="w-full flex justify-center items-center">
           <div className="w-4/5">
-            <p className="p-10 text-6xl w-fit">
+            <p className="p-10 text-5xl w-fit">
               Passionate about <br />
               developing web applications <br />
               based on clean and scalable code <br />

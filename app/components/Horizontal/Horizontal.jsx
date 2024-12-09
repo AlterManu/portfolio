@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 import "./Horizontal.scss";
 
-export function Horizontal() {
+export default function Horizontal() {
   // * Hooks
   const container = useRef(null);
   const { scrollYProgress } = useScroll({

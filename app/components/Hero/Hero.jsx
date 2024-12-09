@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef } from "react";
-import styles from "./Hero.scss";
+import "./Hero.scss";
 import profile from "../../assets/images/profile.png";
 import asterisk from "../../assets/images/asterisk.png";
 import { useScroll, useTransform, motion } from "framer-motion";

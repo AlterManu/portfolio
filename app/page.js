@@ -1,15 +1,18 @@
 "use client";
 
-import About from "@/components/About/About";
 import { useEffect, useState } from "react";
 import useMousePosition from "./utils/hooks/useMousePosition";
 import Lenis from "@studio-freight/lenis";
-import Hero from "./components/Hero/Hero";
-import { Horizontal } from "./components/Horizontal/Horizontal";
-import Experiences from "./components/Experiences/Experiences";
-import Stack from "./components/Stack/Stack";
-import Collaborate from "./components/Collaborate/Collaborate";
-import Contact from "./components/Contact/Contact";
+import {
+  Hero,
+  Horizontal,
+  About,
+  Experiences,
+  Stack,
+  Collaborate,
+  Contact,
+  Footer,
+} from "@/components";
 
 export default function Home() {
   // * Hooks
@@ -65,6 +68,7 @@ export default function Home() {
       <Stack />
       <Collaborate />
       <Contact />
+      <Footer />
     </main>
   );
 }

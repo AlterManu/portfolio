@@ -20,7 +20,7 @@ body {
   background-color: #0f0f0f;
   font-family: "Avant Garde Book BT";
   overflow-x: hidden;
-  margin-bottom: 100vh;
+  color: #fff;
 }
 
 @layer utilities {
