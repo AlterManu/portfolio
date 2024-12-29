@@ -3,19 +3,19 @@ import { useState } from "react";
 
 const socialArray = [
   {
-    title: "Email",
+    title: "email",
     message: "emtuero@hotmail.com",
     url: "mailto:emtuero@hotmail.com;subject=Hello",
     icon: "email",
   },
   {
-    title: "LinkedIn",
+    title: "linkedin",
     message: "linkedin.com/in/emanuel-mt",
     url: "https://www.linkedin.com/in/emanuel-mt",
     icon: "linkedin",
   },
   {
-    title: "GitHub",
+    title: "github",
     message: "github.com/ManuuMT",
     url: "https://github.com/ManuuMT",
     icon: "github",
@@ -64,7 +64,7 @@ export default function Contact() {
           <div className="flex justify-center gap-20">
             <div className="w-1/2">
               <div className="w-full flex justify-end">
-                <h3 className="w-3/5">Feel free to connect with me</h3>
+                <h3 className="w-3/5">feel free to connect with me</h3>
               </div>
             </div>
             <div className="w-1/2 flex flex-col">

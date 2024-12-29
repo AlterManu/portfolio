@@ -12,6 +12,7 @@ import {
   Collaborate,
   Contact,
   Footer,
+  Projects,
 } from "@/components";
 
 export default function Home() {
@@ -61,11 +62,15 @@ export default function Home() {
 
   return (
     <main className="palindrome">
+      <div className="noise" />
       <Hero />
       <Horizontal />
       <About x={xPosition} y={yPosition} />
+
       <Experiences />
+      <Projects />
       <Stack />
+
       <Collaborate />
       <Contact />
       <Footer />
