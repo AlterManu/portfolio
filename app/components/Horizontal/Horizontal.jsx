@@ -33,7 +33,7 @@ export default function Horizontal() {
         {/* White section */}
         <motion.div
           style={{ x: xWhiteDiv }}
-          className="w-screen h-screen flex justify-center items-center overflow-hidden relative bg-[#f5f5f5] text-[transparent]"
+          className="w-screen h-screen flex justify-center items-center overflow-hidden relative bg-[#fff] text-[transparent]"
         >
           <motion.div
             style={{ x: xWhiteText }}

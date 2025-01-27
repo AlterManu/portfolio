@@ -20,7 +20,7 @@ export default function Projects() {
       <div className="container w-full flex justify-center items-center">
         {/* Cards container */}
         <div ref={container} className="w-full">
-          {projectsArray.map((proj, i) => {
+          {projectsArray.map((proj) => {
             return (
               <ProjectItem
                 project={proj}

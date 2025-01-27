@@ -77,6 +77,7 @@ const years = [
 ];
 
 export default function Experiences() {
+  // * Hooks
   const ref = useRef(null);
   const [height, setHeight] = useState();
 
@@ -87,62 +88,69 @@ export default function Experiences() {
     offset: ["start center", "end end"],
   });
 
+  // * Life Cycle
   useEffect(() => {
     setHeight(ref.current?.offsetHeight);
   }, []);
 
   return (
-    <motion.section ref={ref} className="pb-[20vh]">
-      {/* Title */}
-      <div className="w-full flex justify-center items-center ">
-        <div className="w-4/5">
-          <h3 className="p-10 text-2xl w-fit text-white">EXPERIENCE</h3>
+    <div className="w-screen flex justify-center items-center" id="work">
+      <div className="container">
+        {/* Title */}
+        <div className="w-full flex justify-center items-center">
+          <div className="w-4/5">
+            <h3 className="py-20 px-10 text-2xl w-fit">WORK EXPERIENCE</h3>
+          </div>
         </div>
+
+        <motion.section ref={ref} className="pb-[20vh]">
+          {/* Cols Container */}
+          <div className="flex justify-center gap-40 relative">
+            {/* Left Col */}
+            <div className="flex flex-col">
+              {jobsLeft.map((job, i) => (
+                <ExperienceCard
+                  job={job}
+                  className={`experience-card ${
+                    i === 0 ? "mt-20" : "mt-[12rem]"
+                  }`}
+                  key={job.company}
+                />
+              ))}
+            </div>
+
+            {/* SVG */}
+            <motion.svg
+              width="10"
+              height={height}
+              viewBox={`0 0 6 ${height}`}
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <motion.path
+                d={`M3 0V${height}`}
+                stroke="white"
+                style={{ pathLength: scrollYProgress }}
+              />
+            </motion.svg>
+
+            {years.map((year) => (
+              <ExperienceYear key={year.year} year={year} />
+            ))}
+
+            {/* Right Col */}
+            <div className="flex flex-col mt-[12rem]">
+              {jobsRight.map((job) => (
+                <ExperienceCard
+                  job={job}
+                  className="experience-card mt-[12rem]"
+                  key={job.company}
+                />
+              ))}
+            </div>
+          </div>
+        </motion.section>
       </div>
-
-      {/* Cols Container */}
-      <div className="flex justify-center gap-40 relative">
-        {/* Left Col */}
-        <div className="flex flex-col">
-          {jobsLeft.map((job, i) => (
-            <ExperienceCard
-              job={job}
-              className={`experience-card ${i === 0 ? "mt-20" : "mt-[12rem]"}`}
-              key={job.company}
-            />
-          ))}
-        </div>
-
-        {/* SVG */}
-        <motion.svg
-          width="10"
-          height={height}
-          viewBox={`0 0 6 ${height}`}
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <motion.path
-            d={`M3 0V${height}`}
-            stroke="white"
-            style={{ pathLength: scrollYProgress }}
-          />
-        </motion.svg>
-
-        {years.map((year) => (
-          <ExperienceYear key={year.year} year={year} />
-        ))}
-
-        {/* Right Col */}
-        <div className="flex flex-col mt-[12rem]">
-          {jobsRight.map((job) => (
-            <ExperienceCard
-              job={job}
-              className="experience-card mt-[12rem]"
-              key={job.company}
-            />
-          ))}
-        </div>
-      </div>
-    </motion.section>
+    </div>
   );
 }

@@ -8,7 +8,7 @@ const useMousePosition = () => {
       e.clientY +
         window.scrollY -
         window.innerHeight * 5 -
-        window.innerHeight * 0.2
+        window.innerHeight * 0.15
     );
   };
 

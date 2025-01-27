@@ -13,6 +13,7 @@ import {
   Contact,
   Footer,
   Projects,
+  Navbar,
 } from "@/components";
 
 export default function Home() {
@@ -61,19 +62,22 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="palindrome">
-      <div className="noise" />
-      <Hero />
-      <Horizontal />
-      <About x={xPosition} y={yPosition} />
+    <>
+      <Navbar />
+      <main className="palindrome">
+        <div className="noise" />
+        <Hero />
+        <Horizontal />
+        <About x={xPosition} y={yPosition} />
 
-      <Experiences />
-      <Projects />
-      <Stack />
+        <Experiences />
+        <Projects />
+        <Stack />
 
-      <Collaborate />
-      <Contact />
-      <Footer />
-    </main>
+        <Collaborate />
+        <Contact />
+        <Footer />
+      </main>
+    </>
   );
 }

@@ -10,13 +10,13 @@ const socialArray = [
   },
   {
     title: "linkedin",
-    message: "linkedin.com/in/emanuel-mt",
+    message: "emanuel-mt",
     url: "https://www.linkedin.com/in/emanuel-mt",
     icon: "linkedin",
   },
   {
     title: "github",
-    message: "github.com/ManuuMT",
+    message: "manuumt",
     url: "https://github.com/ManuuMT",
     icon: "github",
   },
@@ -30,7 +30,7 @@ const SocialNetwork = ({ social, selected, setSelected }) => {
         style={{
           borderLeft: "10px solid transparent",
           borderRight: "10px solid transparent",
-          borderTop: "10px solid #00e1ff",
+          borderTop: "10px solid var(--main-color)",
         }}
       />
       <Link
@@ -40,7 +40,7 @@ const SocialNetwork = ({ social, selected, setSelected }) => {
         onMouseLeave={() => setSelected(null)}
       >
         <div
-          className="bg-[#00e1ff] w-full h-full absolute z-20 top-0 left-0 transition-all duration-300 cursor-pointer flex items-center px-2"
+          className="bg-[var(--main-color)] w-full h-full absolute z-20 top-0 left-0 transition-all duration-300 cursor-pointer flex items-center px-2"
           style={{
             clipPath:
               social.title === selected ? "inset(0 0 0)" : "inset(50% 0 50%)",

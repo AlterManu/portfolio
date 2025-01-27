@@ -9,7 +9,7 @@ export default function About({ x, y }) {
   const size = isHovered ? 300 : 40;
 
   return (
-    <section className="about-bg">
+    <section className="about-bg" id="about">
       <motion.div
         className="about-mask"
         animate={{ WebkitMaskPosition: `${x - size / 2}px ${y - size / 2}px`, WebkitMaskSize: `${size}px` }} //prettier-ignore

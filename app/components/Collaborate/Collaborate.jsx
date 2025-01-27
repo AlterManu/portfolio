@@ -2,7 +2,7 @@ import statue from "@/assets/images/statue.png";
 
 export default function Collaborate() {
   return (
-    <section className="h-screen mt-[15vh]">
+    <section className="h-screen mt-[15vh]" id="contact">
       <div className="flex h-full">
         <div className="w-1/2 h-full">
           <div className="w-full h-full">

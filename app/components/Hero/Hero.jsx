@@ -16,8 +16,11 @@ export default function Hero() {
   const translateBottom = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section className="hero">
-      <div className="hero-image-container">
+    <section
+      className="w-full h-screen flex justify-center items-center relative mt-[5vh]"
+      id="hero"
+    >
+      <div className="absolute top-0 left-0 w-full h-full z-0">
         {/* eslint-disable-next-line */}
         <img src={profile.src} className="hero-image" alt="hero" />
       </div>
