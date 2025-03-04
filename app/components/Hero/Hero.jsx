@@ -1,9 +1,11 @@
 "use client";
-import React, { useRef } from "react";
-import "./Hero.scss";
-import profile from "../../assets/images/profile.png";
+
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import arrows from "../../assets/images/arrows-down.png";
 import asterisk from "../../assets/images/asterisk.png";
-import { useScroll, useTransform, motion } from "framer-motion";
+import profile from "../../assets/images/profile.png";
+import "./Hero.scss";
 
 export default function Hero() {
   // * Hooks
@@ -20,10 +22,13 @@ export default function Hero() {
       className="w-full h-screen flex justify-center items-center relative mt-[5vh]"
       id="hero"
     >
+      {/* Picture */}
       <div className="absolute top-0 left-0 w-full h-full z-0">
         {/* eslint-disable-next-line */}
         <img src={profile.src} className="hero-image" alt="hero" />
       </div>
+
+      {/* Title */}
       <div ref={container} className="hero-title-container">
         <motion.h1 className="hero-title" style={{ translateY: translateTop }}>
           HI THERE
@@ -48,6 +53,16 @@ export default function Hero() {
             />
           </div>
         </motion.div>
+      </div>
+
+      {/* Based in */}
+      <div className="absolute bottom-[10%] left-6">based in vigo, spain</div>
+
+      {/* Scroll down */}
+      <div className="absolute bottom-[10%] left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+        <p className="text-sm">scroll down</p>
+        {/* eslint-disable-next-line */}
+        <img src={arrows.src} className="w-6 animate-bounce" />
       </div>
     </section>
   );

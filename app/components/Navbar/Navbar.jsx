@@ -11,7 +11,7 @@ const links = [
   { title: "CONTACT", id: "#contact" },
 ];
 
-const title = "anu maldonado".split("");
+const title = "anu/>".split("");
 
 const variant = {
   hidden: (custom) => ({
@@ -80,7 +80,7 @@ export default function Navbar() {
             onMouseEnter={() => setStart(true)}
             onMouseLeave={() => setStart(false)}
           >
-            <h3>m</h3>
+            <h3>{`<m`}</h3>
             <AnimatePresence>
               {start &&
                 title.map((letter, i) => (

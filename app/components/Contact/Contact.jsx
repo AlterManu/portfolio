@@ -22,17 +22,16 @@ const socialArray = [
   },
 ];
 
+const iconStyle = {
+  borderLeft: "10px solid transparent",
+  borderRight: "10px solid transparent",
+  borderTop: "10px solid var(--main-color)",
+};
+
 const SocialNetwork = ({ social, selected, setSelected }) => {
   return (
     <div className="flex">
-      <div
-        className="w-0 h-0 rotate-[-135deg] mt-2 mr-1"
-        style={{
-          borderLeft: "10px solid transparent",
-          borderRight: "10px solid transparent",
-          borderTop: "10px solid var(--main-color)",
-        }}
-      />
+      <div className="w-0 h-0 rotate-[-135deg] mt-2 mr-1" style={iconStyle} />
       <Link
         href={social.url}
         className="relative w-full"
@@ -46,7 +45,7 @@ const SocialNetwork = ({ social, selected, setSelected }) => {
               social.title === selected ? "inset(0 0 0)" : "inset(50% 0 50%)",
           }}
         >
-          <h3 className="text-[#000] text-3xl">{social.message}</h3>
+          <h3 className="text-[#000] text-4xl">{social.message}</h3>
         </div>
         <h3>{social.title}</h3>
       </Link>
@@ -58,15 +57,17 @@ export default function Contact() {
   const [selected, setSelected] = useState(null);
 
   return (
-    <section className="contact-sectionn w-screen mt-[20vh] flex justify-center py-[5vh]">
-      <div className="container flex justify-center">
-        <div className="w-full flex justify-center items-center text-5xl">
-          <div className="flex justify-center gap-20">
+    <section className="w-screen my-[40vh] flex justify-center">
+      <div className="container">
+        <div className="w-full flex justify-center items-center">
+          <div className="flex justify-center gap-20 text-6xl">
+            {/* Contact message */}
             <div className="w-1/2">
               <div className="w-full flex justify-end">
                 <h3 className="w-3/5">feel free to connect with me</h3>
               </div>
             </div>
+            {/* Social section */}
             <div className="w-1/2 flex flex-col">
               {socialArray.map((social) => (
                 <SocialNetwork
