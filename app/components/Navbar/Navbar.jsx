@@ -11,8 +11,6 @@ const links = [
   { title: "CONTACT", id: "#contact" },
 ];
 
-const title = "anu/>".split("");
-
 const variant = {
   hidden: (custom) => ({
     opacity: 0,
@@ -33,6 +31,8 @@ const variant = {
     },
   }),
 };
+
+const title = "anu/>".split("");
 
 export default function Navbar() {
   // * Hooks

@@ -18,20 +18,19 @@ const useMousePosition = () => {
       const currentScroll = window.scrollY; // Scroll actual en píxeles
       const style = getComputedStyle(document.body);
 
-      // Obtener el scroll anterior almacenado en --scroll
+      // Obtiene el scroll anterior almacenado en --scroll
       let prevScroll = parseFloat(style.getPropertyValue("--scroll")) || 0;
 
-      // Calcular la diferencia de scroll
+      // Calcula la diferencia de scroll
       const diffScroll = currentScroll - prevScroll;
 
-      // Obtener la posición actual del cursor en --y
+      // Obtiene la posición actual del cursor en --y
       let y = parseFloat(style.getPropertyValue("--y")) || 0;
 
-      // Sumar la diferencia del scroll a la posición del cursor
+      // Suma la diferencia del scroll a la posición del cursor
       const updatedY = y + diffScroll;
 
-      // console.log("updatedY -----> ", updatedY);
-      // Actualizar el valor de --y y --scroll
+      // Actualiza el valor de --y y --scroll
       document.body.style.setProperty("--y", updatedY);
       document.body.style.setProperty("--scroll", currentScroll);
     });

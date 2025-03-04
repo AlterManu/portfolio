@@ -56,7 +56,7 @@ export default function Hero() {
       </div>
 
       {/* Based in */}
-      <div className="absolute bottom-[10%] left-6">based in vigo, spain</div>
+      <div className="absolute bottom-[7%] left-6">based in vigo, spain</div>
 
       {/* Scroll down */}
       <div className="absolute bottom-[10%] left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
