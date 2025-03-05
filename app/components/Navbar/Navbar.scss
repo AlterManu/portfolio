@@ -1,0 +1,23 @@
+.navbar-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  backdrop-filter: blur(15px);
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+  z-index: 20;
+}
+
+.nav-logo {
+  color: white;
+  margin: 0;
+  -webkit-text-stroke: 1px var(--main-color);
+  color: transparent;
+  margin-left: 0px;
+  cursor: pointer;
+}

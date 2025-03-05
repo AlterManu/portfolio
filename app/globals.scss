@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --x: 0;
+  --y: 0;
+  --scroll: 0;
+  --main-color: #00e1ff;
+}
+
+@font-face {
+  font-family: "Avant Garde Book BT";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./assets/fonts/AVGARDD_2.woff") format("woff");
+}
+
+body {
+  margin: 0px;
+  background-color: #0f0f0f;
+  font-family: "Avant Garde Book BT";
+  overflow-x: hidden;
+  color: #fff;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.palindrome {
+  font-family: var(--font-palindrome);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 1);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  /* background: var(--blue); */
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.noise {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120vh;
+  background: url(./assets/images/noise.png);
+  opacity: 0.5;
+  animation: noise 0.09s infinite;
+  pointer-events: none;
+  z-index: 120;
+  transform: translateZ(0);
+}
+
+@keyframes noise {
+  0% {
+    background-position: 0 0;
+  }
+  10% {
+    background-position: -5% -10%;
+  }
+  20% {
+    background-position: -15% 5%;
+  }
+  30% {
+    background-position: 7% -25%;
+  }
+  40% {
+    background-position: 20% 25%;
+  }
+  50% {
+    background-position: -25% 10%;
+  }
+  60% {
+    background-position: 15% 5%;
+  }
+  70% {
+    background-position: 0 15%;
+  }
+  80% {
+    background-position: 25% 35%;
+  }
+  90% {
+    background-position: -10% 10%;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
