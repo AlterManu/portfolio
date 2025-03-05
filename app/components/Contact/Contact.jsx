@@ -16,8 +16,8 @@ const socialArray = [
   },
   {
     title: "github",
-    message: "manuumt",
-    url: "https://github.com/ManuuMT",
+    message: "altermanu",
+    url: "https://github.com/AlterManu",
     icon: "github",
   },
 ];

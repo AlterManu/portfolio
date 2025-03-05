@@ -59,7 +59,7 @@ export default function Hero() {
       <div className="absolute bottom-[7%] left-6">based in vigo, spain</div>
 
       {/* Scroll down */}
-      <div className="absolute bottom-[10%] left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+      <div className="absolute bottom-[7%] left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
         <p className="text-sm">scroll down</p>
         {/* eslint-disable-next-line */}
         <img src={arrows.src} className="w-6 animate-bounce" />
