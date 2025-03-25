@@ -37,15 +37,50 @@
 
 .aurora-next {
   @extend .stack-aurora;
-  background-color: #080808;
+  background-color: #000;
 }
 
 .aurora-node {
   @extend .stack-aurora;
-  background-color: #77af65;
+  background-color: #7dbe42;
 }
 
 .aurora-mongo {
   @extend .stack-aurora;
   background-color: #001e2b;
+}
+
+.aurora-sass {
+  @extend .stack-aurora;
+  background-color: #ff8cba;
+}
+
+.aurora-tailwind {
+  @extend .stack-aurora;
+  background-color: #00b8d8;
+}
+
+.aurora-bootstrap {
+  @extend .stack-aurora;
+  background-color: #7711f7;
+}
+
+.aurora-postgresql {
+  @extend .stack-aurora;
+  background-color: #3b7baf;
+}
+
+.aurora-typeorm {
+  @extend .stack-aurora;
+  background-color: #f3af3d;
+}
+
+.aurora-reactquery {
+  @extend .stack-aurora;
+  background-color: #024b80;
+}
+
+.aurora-jest {
+  @extend .stack-aurora;
+  background-color: #de5569;
 }
